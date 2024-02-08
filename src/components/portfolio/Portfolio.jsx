@@ -23,7 +23,7 @@ const items = [
   },
   {
     id: 4,
-    title: "Founder",
+    title: "Founder KIIT & KISS",
     img: "/founder.jpg",
     desc: "Dr. Achyuta Samanta is a visionary educator and philanthropist, whose life's work has been dedicated to eradicating poverty through education. As the founder of both KIIT and KISS, Dr. Samanta has revolutionized the landscape of higher education and social entrepreneurship in India. His journey from humble beginnings to establishing one of the most successful models of integrated social and educational development is a testament to his unwavering commitment to societal upliftment. Dr. Samanta's contributions have been acknowledged worldwide, making him a respected figure in the realms of education and social change.",
   }
@@ -48,6 +48,7 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{y}}>
             <h2 style={{
               fontFamily: "Poppins"
+
             }}>{item.title}</h2>
             <p>{item.desc}</p>
            {/* <button>See Demo</button>*/}
