@@ -1,0 +1,180 @@
+@import "../../app.scss";
+
+.hero {
+  height: calc(100vh );
+  overflow: hidden;
+  background: linear-gradient(180deg, #fcd7ab, #ffc176);
+  position: relative;
+
+  .wrapper {
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+
+    .textContainer {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+
+      @include mobile {
+        height: 50%;
+        width: 100%;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 22px;
+        color: rgb(0, 0, 0);
+        margin-top: -20px;
+        // letter-spacing: 10px;
+      }
+      h3 {
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        margin-top: -20px;
+        margin-bottom: -20px;
+        // letter-spacing: 10px;
+        @include mobile{
+          font-size: 8px;
+        }
+      }
+
+
+      h1 {
+        font-size: 38px;
+        color: rgb(0, 0, 0);
+        // margin-top: 15px;
+
+        @include mobile {
+          font-size: 36px;
+          // margin-top: 15px;
+        }
+      }
+
+      .buttons {
+        z-index: 99;
+        button {
+          padding: 15px;
+          // border: 1px solid white;
+          border-radius: 30px;
+          background-color: #3f2305;
+          color: white;
+          margin-right: 20px;
+          margin-top: -22px;
+          font-weight: 800;
+          cursor: pointer;
+          z-index: 99;
+
+
+
+          @include mobile{
+            padding: 5px;
+          // border: 1px solid white;
+          border-radius: 25px;
+          background-color: #3f2305;
+          color: white;
+          // margin-right: 20px;
+          margin-top: -29px;
+          cursor: pointer;
+          font-weight: 800;
+          }
+        }
+      }
+
+      img {
+        width: 360px;
+        height: auto;
+
+        @include mobile {
+          // font-size: 36px;
+          // margin-top: 15px;
+          
+        }
+      }
+    }
+  }
+
+  .imageContainer {
+    // height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 26px;
+    height: auto;
+    padding: 50px;
+
+    @include mobile {
+      height: 50%;
+      width: 100%;
+      margin-top: 8px;
+      padding: 10px;  ;
+      top: unset;
+      bottom: 0;
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .rotatingImage {
+    animation: rotate 15s linear infinite; 
+    height: auto;
+    padding: 50px;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+  
+  // .wrapper {
+  //   display: flex; /* Ensure top and bottom elements flex together */
+  //   flex-direction: column; /* Stack items vertically */
+  //   align-items: center; /* Horizontally center */
+  //   justify-content: space-between; /* Vertically distribute evenly */
+  //   min-height: 100vh; /* Ensure full viewport height */
+  // }
+  
+  .textContainer {
+    display: flex; /* Wrap elements flexibly */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Horizontally center individual elements */
+    justify-content: center; /* Vertically center within available space */
+    padding: 20px; /* Add some padding for aesthetics */
+  }
+  
+  .slidingTextContainer {
+    text-align: center; /* Horizontally center the "sliding text" */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  
+  /* Apply any existing styles for `textVariants`, `sliderVariants`, etc. */
+  
+
+  .slidingTextContainer {
+    position: absolute;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: #00000009;
+    width: 50%;
+    
+    font-weight: bold;
+  }
+}
