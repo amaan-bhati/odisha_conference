@@ -43,27 +43,27 @@ const Services = () => {
   const data = [
     {
       name: "Historic Injustice",
-      icon: "/public/icons/historic-injustice.png",
+      icon: "/icons/historic-injustice.png",
       content: "Historic Injustice"
     },
     {
       name: "Global Leaders",
-      icon: "/public/icons/global-leader.png",
+      icon: "/icons/global-leader.png",
       content: "Global Leaders"
     },
     {
       name: "Fosturing Solutions",
-      icon: "/public/icons/fosturing-solutions.png",
+      icon: "/icons/fosturing-solutions.png",
       content: "Fosturing Solutions"
     },
     {
       name: "Harnessing Technologies",
-      icon: "/public/icons/harnessing-technologies.png",
+      icon: "/icons/harnessing-technologies.png",
       content: "Harnessing Technologies"
     },
     {
       name: "Stories",
-      icon: "/public/icons/stories.png",
+      icon: "/icons/stories.png",
       content: "Stories"
     },
   ]
