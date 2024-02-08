@@ -24,7 +24,7 @@ const Parallax = ({ type }) => {
             : "linear-gradient(180deg, #ffc176,  #fcd7ab)",
       }}
     >
-      <motion.h1 style={{ y: yText }}>
+      <motion.h1 style={{ y: yText, fontFamily: "Poppins"}}>
         {type === "services" ? "ABOUT" : "TNCL2024"}
       </motion.h1>
       <motion.div className="mountains"></motion.div>

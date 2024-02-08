@@ -1,4 +1,3 @@
-import Test from "./Test";
 import "./app.scss";
 import Contact from "./components/contact/Contact";
 import Cursor from "./components/cursor/Cursor";
@@ -7,8 +6,7 @@ import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
-// import ToggleButton from "./components/sidebar/toggleButton/ToggleButton";
-import ToggleButton from "./components/toggle/ToggleButton";
+import Culture from "./components/culture/culture";
 
 const App = () => {
   return (
@@ -27,6 +25,9 @@ const App = () => {
       <Portfolio />
       <section>
         <Services />
+      </section>
+      <section id="Culture">
+        <Culture />
       </section>
       <section id="Contact">
         <Contact />

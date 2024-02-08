@@ -33,6 +33,9 @@ const Links = ({setOpen}) => {
     name: "About",
     link: "#Portfolio"
   },{
+    name: "Explore",
+    link: "#Culture"
+  },{
     name: "Contact",
     link: "#Contact"
   },{
