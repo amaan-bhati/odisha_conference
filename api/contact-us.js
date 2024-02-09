@@ -14,10 +14,8 @@ const contactUs = async (req, res) => {
   }
 
   const data = req.body;
-  
-  const { name=null, email=null, message=null } = data;
 
-  if (!email || !message || !name) {
+  if (!data?.email || !data?.message || !data?.name) {
     return res.json(
       {
         message: "Please fill all the fields",
@@ -27,6 +25,7 @@ const contactUs = async (req, res) => {
       }
     );
   }
+  const { name, email, message } = data;
   try {
     const MailGun = new mailGun(formData);
 
