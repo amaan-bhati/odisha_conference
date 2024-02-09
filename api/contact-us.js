@@ -19,6 +19,11 @@ const contactUs = async (req, res) => {
     return res.json(
       {
         message: "Please fill all the fields",
+        data: {
+          email: data?.email,
+          message: data?.message,
+          name: data?.name,
+        },
       },
       {
         status: 400,
