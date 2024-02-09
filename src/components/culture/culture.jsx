@@ -31,9 +31,7 @@ const Culture = () => {
       const res = await fetch("",{
         body: {}
       })
-  
       const data = res.json()
-  
       console.log(data)
     } catch (error) {
       console.log(error)
