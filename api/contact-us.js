@@ -2,6 +2,17 @@ import mailGun from "mailgun.js";
 import formData from "form-data";
 
 const contactUs = async (req, res) => {
+  if (req.method !== "POST") {
+    return res.json(
+      {
+        message: "Method not allowed",
+      },
+      {
+        status: 405,
+      }
+    );
+  }
+
   const data = req.body;
 
   if (!data.email || !data.message) {
