@@ -11,6 +11,8 @@
     height: 100%;
     margin: auto;
 
+    
+
     .textContainer {
       width: 50%;
       height: 100%;
@@ -18,12 +20,14 @@
       flex-direction: column;
       justify-content: center;
       gap: 40px;
+      // margin-top: 70px;
 
       @include mobile {
         height: 50%;
         width: 100%;
         gap: 20px;
         align-items: center;
+        margin-top: 90px;
         text-align: center;
       }
 
@@ -40,7 +44,8 @@
         margin-bottom: -20px;
         // letter-spacing: 10px;
         @include mobile{
-          font-size: 8px;
+          display: none;
+          // font-size: 8px;
         }
       }
 
@@ -57,6 +62,9 @@
       }
 
       .buttons {
+        display: flex; /* Ensure parent container is a flexbox */
+  justify-content: center; /* Horizontally center content within the flexbox */
+  align-items: center;
         z-index: 99;
         button {
           padding: 15px;
@@ -64,13 +72,26 @@
           border-radius: 30px;
           background-color: #3f2305;
           color: white;
-          margin-right: 20px;
+          // margin-right: 20px;
           margin-top: -22px;
           font-weight: 800;
           cursor: pointer;
+          justify-content: center;
+          
           z-index: 99;
 
 
+          @include tablet{
+            padding: 5px;
+          // border: 1px solid white;
+          border-radius: 25px;
+          background-color: #3f2305;
+          color: white;
+          // margin-right: 20px;
+          margin-top: -29px;
+          cursor: pointer;
+          font-weight: 800;
+          }
 
           @include mobile{
             padding: 5px;
@@ -119,7 +140,7 @@
 
     img{
       width: 100%;
-      height: 100%;
+      // height: 100%;
       object-fit: cover;
     }
   }
@@ -127,7 +148,8 @@
   .rotatingImage {
     animation: rotate 15s linear infinite; 
     height: auto;
-    padding: 50px;
+    padding: 76px;
+    margin-top: 50px;
   }
   
   @keyframes rotate {
