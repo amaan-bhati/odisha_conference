@@ -4,8 +4,11 @@
   height: 100%;
   max-width: 1366px;
   margin: auto;
+  margin-top: 4rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   gap: 50px;
 
   @include mobile {
@@ -44,12 +47,11 @@
   .formContainer {
     flex: 1;
     position: relative;
-    
+
     @include mobile {
       padding: 50px;
       width: 100%;
     }
-
 
     .phoneSvg {
       stroke: orange;
@@ -67,7 +69,7 @@
       textarea {
         padding: 20px;
         background-color: transparent;
-        border: 1px solid rgba(0, 0, 0, .5);
+        border: 1px solid rgba(0, 0, 0, 0.5);
         color: white;
         border-radius: 5px;
 

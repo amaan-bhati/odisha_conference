@@ -2,6 +2,9 @@ import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import { toast } from "sonner";
+import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 
 const variants = {
   initial: {
@@ -26,11 +29,9 @@ const Contact = () => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
   const resetData = () => {
     setName("");
     setEmail("");
-    setMessage("");
   };
 
   const isInView = useInView(ref, { margin: "-100px" });
@@ -38,7 +39,7 @@ const Contact = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    if (!name || !email || !message) {
+    if (!name || !email) {
       return toast.error("Please fill all the fields");
     }
 
@@ -51,7 +52,6 @@ const Contact = () => {
         body: JSON.stringify({
           name,
           email,
-          message,
         }),
       });
       const data = await res.json();
@@ -74,32 +74,42 @@ const Contact = () => {
       initial="initial"
       whileInView="animate"
     >
-      <motion.div className="textContainer" variants={variants}>
-        <motion.h1 variants={variants}>Get in Touch</motion.h1>
-        <motion.div className="item" variants={variants}>
-          <h2>Mail</h2>
-          <span>tnlc.2024@kiit.ac.in</span>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: "100%",
+          border: ".5px solid black",
+          padding: "1.5rem",
+          flexWrap: "wrap",
+        }}
+      >
+        <motion.div className="textContainer" variants={variants}>
+          <motion.h1 variants={variants}>Stay Updated</motion.h1>
+          <motion.div className="item" variants={variants}>
+            <h2>Mail</h2>
+            <span>tnlc.2024@kiit.ac.in</span>
+          </motion.div>
+          <motion.div className="item" variants={variants}>
+            <h2>Address</h2>
+            <span>Campus 3, KIIT DU, Patia, Bhubaneswar, Odisha</span>
+          </motion.div>
         </motion.div>
-        <motion.div className="item" variants={variants}>
-          <h2>Address</h2>
-          <span>Campus 3, KIIT DU, Patia, Bhubaneswar, Odisha</span>
-        </motion.div>
-      </motion.div>
-      <div className="formContainer">
-        <motion.div
-          className="phoneSvg"
-          initial={{ opacity: 1 }}
-          whileInView={{ opacity: 0 }}
-          transition={{ delay: 1.5, duration: 0.5 }}
-        >
-          <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
-            <motion.path
-              strokeWidth={0.2}
-              fill="none"
-              initial={{ pathLength: 0 }}
-              animate={isInView && { pathLength: 1 }}
-              transition={{ duration: 3 }}
-              d="M28.189,16.504h-1.666c0-5.437-4.422-9.858-9.856-9.858l-0.001-1.664C23.021,4.979,28.189,10.149,28.189,16.504z
+        <div className="formContainer">
+          <motion.div
+            className="phoneSvg"
+            initial={{ opacity: 1 }}
+            whileInView={{ opacity: 0 }}
+            transition={{ delay: 1.5, duration: 0.5 }}
+          >
+            <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
+              <motion.path
+                strokeWidth={0.2}
+                fill="none"
+                initial={{ pathLength: 0 }}
+                animate={isInView && { pathLength: 1 }}
+                transition={{ duration: 3 }}
+                d="M28.189,16.504h-1.666c0-5.437-4.422-9.858-9.856-9.858l-0.001-1.664C23.021,4.979,28.189,10.149,28.189,16.504z
             M16.666,7.856L16.665,9.52c3.853,0,6.983,3.133,6.981,6.983l1.666-0.001C25.312,11.735,21.436,7.856,16.666,7.856z M16.333,0
             C7.326,0,0,7.326,0,16.334c0,9.006,7.326,16.332,16.333,16.332c0.557,0,1.007-0.45,1.007-1.006c0-0.559-0.45-1.01-1.007-1.01
             c-7.896,0-14.318-6.424-14.318-14.316c0-7.896,6.422-14.319,14.318-14.319c7.896,0,14.317,6.424,14.317,14.319
@@ -112,23 +122,71 @@ const Contact = () => {
             c1.041,1.228,2.127,2.416,3.245,3.576l-0.006,0.004c0.031,0.031,0.063,0.06,0.095,0.09c0.03,0.031,0.059,0.062,0.088,0.095
             l0.006-0.006c1.16,1.118,2.535,2.765,4.769,4.255c4.703,3.141,8.312,2.264,10.438,1.098c3.67-2.021,5.312-6.338,5.312-9.719
             C32.666,7.326,25.339,0,16.333,0z"
-            />
-          </svg>
-        </motion.div>
-        <motion.form
-          ref={formRef}
-          onSubmit={sendEmail}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
+              />
+            </svg>
+          </motion.div>
+          <motion.form
+            ref={formRef}
+            onSubmit={sendEmail}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 1 }}
+          >
+            <input type="text" required placeholder="Name" name="name" />
+            <input type="email" required placeholder="Email" name="email" />
+            <button>Submit</button>
+          </motion.form>
+        </div>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "1rem",
+          gap: ".6rem",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            gap: "1rem",
+          }}
         >
-          <input type="text" required placeholder="Name" name="name" />
-          <input type="email" required placeholder="Email" name="email" />
-          <textarea rows={8} placeholder="Message" name="message" />
-          <button>Submit</button>
-          {/* {error && "Error"}
-          {success && "Success"} */}
-        </motion.form>
+          <a
+            href="https://www.facebook.com/kiituniversity"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaFacebook size={28} />
+          </a>
+          <a
+            href="https://www.instagram.com/kiituniversity"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaInstagram size={28} />
+          </a>
+          <a
+            href="https://twitter.com/kiituniversity"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaTwitter size={28} />
+          </a>
+          <a
+            href="https://www.linkedin.com/school/kiituniversity/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedinIn size={28} />
+          </a>
+        </div>
+        <div>
+          <p>© 2024 TNLC 2024 Conference</p>
+        </div>
       </div>
     </motion.div>
   );

@@ -12,6 +12,7 @@ const App = () => {
   return (
     <div>
       <Cursor />
+
       <section id="Homepage">
         <Navbar />
         <Hero />

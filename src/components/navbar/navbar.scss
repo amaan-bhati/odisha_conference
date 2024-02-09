@@ -1,9 +1,24 @@
 @import "../../app.scss";
 
 .navbar {
-  // height: 100px;
-  display: none;
-  background-color: #9e723d;
+  z-index: 99999;
+  height: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  img {
+    margin-left: 4rem;
+
+    @include mobile {
+      margin-left: 0rem;
+    }
+  }
+
+  @include mobile {
+    align-items: center;
+  }
+
 
   .wrapper {
     max-width: 1366px;

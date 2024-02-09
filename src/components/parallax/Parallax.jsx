@@ -35,17 +35,43 @@ const Parallax = ({ type }) => {
         <motion.h1 style={{ y: yText, fontFamily: "Poppins" }}>
           {type === "" ? "ABOUT" : "TNLC 2024"}
         </motion.h1>
+        <motion.h3
+          style={{
+            y: yText,
+            fontFamily: "Poppins",
+            maxWidth: "50%",
+            textAlign: "center",
+            fontWeight: "800",
+            marginBottom: "20px",
+          }}
+        >
+          University Transformation and Collective Action: Nurturing Equitable
+          Futures through Inclusive Networks
+        </motion.h3>
+        <motion.hr
+          style={{
+            width: "50%",
+            marginBottom: "10px",
+            backgroundColor: "black",
+            height: "2px",
+            border: "none",
+            borderRadius: "10px",
+            opacity: "0.5",
+            y: yText,
+          }}
+        />
         <motion.p
           style={{
             y: yText,
             fontFamily: "Poppins",
             maxWidth: "50%",
+            textAlign: "center",
           }}
         >
-          Global congregation where education meets action, hosted in the heart
-          of Odisha, India. This year, we invite you to immerse yourself in a
-          transformative experience in Bhubaneswar, a city where ancient art and
-          culture breathe life into our contemporary
+          This year, we invite you to immerse yourself in a transformative
+          experience in Bhubaneswar, a city where ancient art and culture
+          breathe life into our contemporary quest for equity and inclusivity in
+          education.
         </motion.p>
       </div>
       <motion.div className="mountains"></motion.div>

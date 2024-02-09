@@ -7,9 +7,11 @@ const items = [
     id: 1,
     title: "TNLC2024",
     img: "/A.png",
-    desc: "The TNLC2024 stands at the crossroads of history and innovation, hosted in Bhubaneswar, the 'temple city', by KIIT and KISS — institutions renowned for their groundbreaking model of civic engagement. This year, we delve into how universities can act as catalysts for change, fostering global citizenship and building networks that transcend traditional boundaries. Together, we'll explore the roles of universities in addressing historic injustices, transforming to meet contemporary challenges, and nurturing the next generation of leaders equipped to forge inclusive futures.",
+    desc: `The 2024 Talloires Network Leaders Conference, co-hosted by the Talloires Network of Engaged Universities (TNEU), in Bhubaneswar, Odisha, represents a pivotal gathering under the theme "University Transformation and Collective Action: Nurturing Equitable Futures through Inclusive Networks. This conference aims to foster global dialogue and collaboration, addressing the urgent need for university-led initiatives in tackling societal inequalities, embracing technological advancements for connectivity, and promoting global citizenship. By uniting diverse stakeholders, TNLC2024 seeks to chart a course towards more equitable and prosperous communities through innovative educational practices and inclusive, sustainable development.`,
     info: "Know More",
     link: "https://talloiresnetwork.tufts.edu/tnlc2024-india/",
+    homepageUrl: "https://talloiresnetwork.tufts.edu/who-we-are/",
+    aboutTNEU: "About TNEU",
   },
   {
     id: 2,
@@ -62,9 +64,21 @@ const Single = ({ item }) => {
               {item.title}
             </h2>
             <p>{item.desc}</p>
-            <a href={item.link}>
-              <button>{item.info}</button>
-            </a>
+            <div
+              style={{
+                display: "flex",
+                gap: "1rem",
+              }}
+            >
+              <a href={item.link} target="_blank" rel="noreferrer">
+                <button>{item.info}</button>
+              </a>
+              {item.homepageUrl && (
+                <a href={item.homepageUrl} target="_blank" rel="noreferrer">
+                  <button>{item.aboutTNEU}</button>
+                </a>
+              )}
+            </div>
           </motion.div>
         </div>
       </div>

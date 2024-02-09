@@ -1,7 +1,7 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
-import ToggleButton from "../sidebar/toggleButton/ToggleButton"
-import Sidebar from "../sidebar/Sidebar"
+// import ToggleButton from "../sidebar/toggleButton/ToggleButton";
+// import Sidebar from "../sidebar/Sidebar";
 
 const textVariants = {
   initial: {
@@ -33,7 +33,7 @@ const sliderVariants = {
     x: "-220%",
     transition: {
       repeat: Infinity,
-      repeatType:"mirror",
+      repeatType: "mirror",
       duration: 20,
     },
   },
@@ -49,31 +49,45 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-        <div>
-          <Sidebar />
-        </div>
-        
-        <motion.h1 variants={textVariants}>
-          Talloires Network Leaders<br/> Conference (TNLC 2024)
+          {/* <div>
+            <Sidebar />
+          </div> */}
+
+          <motion.h1 variants={textVariants}>
+            Talloires Network Leaders
+            <br /> Conference (TNLC 2024)
           </motion.h1>
+          <motion.h4 variants={textVariants}>Bhubaneswar, India</motion.h4>
           <motion.h2 variants={textVariants}>3-5 December 2024</motion.h2>
           <motion.h3 variants={textVariants}>Organised by</motion.h3>
           <motion.img
-          variants={textVariants}
-          // animate="scrollButton"
-          src="/organisers.png"
-          alt=""
-        />
-        <motion.h3 variants={textVariants}> Global congregation where education meets action, hosted in the heart of Odisha, India. This year, we invite you to immerse yourself in a transformative experience in Bhubaneswar, a city where ancient art and culture breathe life into our contemporary </motion.h3>
-        <motion.div variants={textVariants} className="buttons">
-        {/* <motion.button variants={textVariants}>
+            variants={textVariants}
+            // animate="scrollButton"
+            src="/organisers.png"
+            alt=""
+          />
+          <motion.h3
+            variants={textVariants}
+            style={{
+              textAlign: "center",
+              margin: "1rem 0 1rem 0",
+            }}
+          >
+            Welcome to the 2024 Talloires Network Leaders Conference (TNLC2024),
+            a global congregation where education meets action, hosted in the
+            heart of Odisha, India.
+          </motion.h3>
+          <motion.div variants={textVariants} className="buttons">
+            {/* <motion.button variants={textVariants}>
         See the Latest Works
       </motion.button>*/}
-              <a href="https://www.givepulse.com/event/412037">
-                <motion.button variants={textVariants} >Register Now</motion.button>
-              </a>
-              </motion.div>
-         {/* <motion.img
+            <a href="https://www.givepulse.com/event/412037">
+              <motion.button variants={textVariants}>
+                Register Now
+              </motion.button>
+            </a>
+          </motion.div>
+          {/* <motion.img
             variants={textVariants}
             animate="scrollButton"
             src="/scroll.png"
@@ -87,11 +101,10 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-      Talloires Network Leaders Conference
+        Talloires Network Leaders Conference
       </motion.div>
       <div className="imageContainer">
-        <img src="/hero.png" alt=""
-        className="rotatingImage" />
+        <img src="/hero.png" alt="" className="rotatingImage" />
       </div>
     </div>
   );
