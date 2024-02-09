@@ -148,9 +148,15 @@
   .rotatingImage {
     animation: rotate 15s linear infinite; 
     height: auto;
+   margin-top: 50px;
+
+   @include mobile{
     padding: 76px;
     margin-top: 50px;
+   }
   }
+
+
   
   @keyframes rotate {
     from {
