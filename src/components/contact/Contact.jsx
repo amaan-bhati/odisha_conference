@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
+import { toast } from "sonner";
 
 const variants = {
   initial: {
@@ -20,24 +21,48 @@ const variants = {
 const Contact = () => {
   const ref = useRef();
   const formRef = useRef();
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
+  // const [error, setError] = useState(false);
+  // const [success, setSuccess] = useState(false);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const resetData = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
 
   const isInView = useInView(ref, { margin: "-100px" });
 
   const sendEmail = async (e) => {
     e.preventDefault();
 
+    if (!name || !email || !message) {
+      return toast.error("Please fill all the fields");
+    }
+
     try {
-      const res = await fetch("",{
-        body: {}
-      })
-  
-      const data = res.json()
-  
-      console.log(data)
-    } catch (error) {
-      console.log(error)
+      const res = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
+      const data = await res.json();
+      if (!data.success) {
+        toast.error(data.message);
+      } else {
+        toast.success(data.message);
+      }
+      resetData();
+    } catch (err) {
+      toast.error("Unknown error Occurred");
     }
   };
 
@@ -59,14 +84,13 @@ const Contact = () => {
           <h2>Address</h2>
           <span>Campus 3, KIIT DU, Patia, Bhubaneswar, Odisha</span>
         </motion.div>
-        
       </motion.div>
       <div className="formContainer">
         <motion.div
           className="phoneSvg"
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
-          transition={{ delay: 1.5  , duration: .5 }}
+          transition={{ delay: 1.5, duration: 0.5 }}
         >
           <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
             <motion.path
@@ -98,12 +122,12 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
         >
-          <input type="text" required placeholder="Name" name="name"/>
-          <input type="email" required placeholder="Email" name="email"/>
-          <textarea rows={8} placeholder="Message" name="message"/>
+          <input type="text" required placeholder="Name" name="name" />
+          <input type="email" required placeholder="Email" name="email" />
+          <textarea rows={8} placeholder="Message" name="message" />
           <button>Submit</button>
-          {error && "Error"}
-          {success && "Success"}
+          {/* {error && "Error"}
+          {success && "Success"} */}
         </motion.form>
       </div>
     </motion.div>
