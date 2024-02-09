@@ -1,0 +1,8 @@
+@import "../../app.scss";
+
+iframe{
+    @include mobile {
+        // height: auto;
+        width: auto;
+    }
+}
