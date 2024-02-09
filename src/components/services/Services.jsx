@@ -43,7 +43,7 @@ const Services = () => {
       name: "Historic Injustice",
       fullName:
         "Addressing Historic Institutional Injustices and Harms to Repair and Heal",
-      icon: "/icons/historic-injustice.png",
+      icon: "/historic-injustice.png",
       content: [
         "In what ways have certain historical practices by universities caused harm in their communities and societies? In what ways have universities publicly acknowledged their historic role in their societies?",
         "In what ways are universities addressing historical injustices? How are universities contributing to create positive impacts in their communities and taking steps to repair harm?",
@@ -54,7 +54,7 @@ const Services = () => {
       name: "Global Leaders",
       fullName:
         "Nurturing the Next Generation of Global Leaders and Engaged Scholars",
-      icon: "/icons/global-leader.png",
+      icon: "/global-leader.png",
       content: [
         "How can we nurture the development of intercultural competencies and prepare young people for active global citizenship?",
         "Which theories and capabilities are foundational to understanding and achieving equitable and inclusive societies?",
@@ -67,7 +67,7 @@ const Services = () => {
       name: "Fosturing Solutions",
       fullName:
         "Fostering Local Solutions and Inclusive Networks for Global Change",
-      icon: "/icons/fosturing-solutions.png",
+      icon: "/fosturing-solutions.png",
       content: [
         "How are universities fostering constructive community engagement and deliberation in a global context of increasing polarization, social conflict and decreasing civility?",
         "How can university networks become more responsive to community needs and promote continuous collaboration and knowledge co-creation with communities?",
@@ -80,7 +80,7 @@ const Services = () => {
       name: "Harnessing Technologies",
       fullName:
         "Harnessing Technology for Equitable Futures and Inclusive Progress",
-      icon: "/icons/harnessing-technologies.png",
+      icon: "/harnessing-technologies.png",
       content: [
         "How might universities use technology to adapt to a rapidly changing world to increase accessibility and promote diverse and creative ways of knowing?",
         "How can universities ethically integrate artificial intelligence into education while increasing access and inclusivity and supporting student learning and development?",
@@ -92,7 +92,7 @@ const Services = () => {
       name: "Stories",
       fullName:
         "Sharing Stories of University Transformation and Collective Action",
-      icon: "/icons/stories.png",
+      icon: "/stories.png",
       content: [
         "How are universities - individually and collectively - engaging with pressing challenges (climate change, war and conflict, public health emergencies, migration, and displacement)?",
         "How can university leaders take risks and harness university resources? What innovative approaches and initiatives for engagement are contributing to more equitable and inclusive societies?",
