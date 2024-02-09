@@ -28,13 +28,13 @@ const Culture = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("",{
-        body: {}
-      })
-      const data = res.json()
-      console.log(data)
+      const res = await fetch("", {
+        body: {},
+      });
+      const data = res.json();
+      console.log(data);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
 
@@ -46,24 +46,35 @@ const Culture = () => {
       initial="initial"
       whileInView="animate"
       style={{
-        
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         gap: "2.4rem",
-        marginTop: "2.4rem"
+        marginTop: "2.4rem",
       }}
     >
-    <h2 >Explore Odisha</h2>
-    <iframe width={500*1.778} height="500" src="https://www.youtube.com/embed/HSzlmvwtPsQ?si=8TqA7zRsphSxMV-2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
-    <p style={{
-        maxWidth: "888.5px",
-        textAlign: "center"
-    }}>
-    Embrace the visual odyssey that takes you on a profound journey through the vibrant art, rich culture, and transformative education landscape of Bhubaneswar, home to the esteemed KIIT and KISS.
-    </p>
+      <h2>Explore Odisha</h2>
+      <iframe
+        style={{
+          width: "90%",
+          height: "70vh",
+        }}
+        src="https://www.youtube.com/embed/HSzlmvwtPsQ?si=8TqA7zRsphSxMV-2"
+        title="Culture of Odisha"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      />
+      <p
+        style={{
+          maxWidth: "888.5px",
+          textAlign: "center",
+        }}
+      >
+        Embrace the visual odyssey that takes you on a profound journey through
+        the vibrant art, rich culture, and transformative education landscape of
+        Bhubaneswar, home to the esteemed KIIT and KISS.
+      </p>
     </motion.div>
-
   );
 };
 

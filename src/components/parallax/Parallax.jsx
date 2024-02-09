@@ -24,9 +24,30 @@ const Parallax = ({ type }) => {
             : "linear-gradient(180deg, #ffc176,  #fcd7ab)",
       }}
     >
-      <motion.h1 style={{ y: yText, fontFamily: "Poppins"}}>
-        {type === "" ? "ABOUT" : "TNCL2024"}
-      </motion.h1>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <motion.h1 style={{ y: yText, fontFamily: "Poppins" }}>
+          {type === "" ? "ABOUT" : "TNLC 2024"}
+        </motion.h1>
+        <motion.p
+          style={{
+            y: yText,
+            fontFamily: "Poppins",
+            maxWidth: "50%",
+          }}
+        >
+          Global congregation where education meets action, hosted in the heart
+          of Odisha, India. This year, we invite you to immerse yourself in a
+          transformative experience in Bhubaneswar, a city where ancient art and
+          culture breathe life into our contemporary
+        </motion.p>
+      </div>
       <motion.div className="mountains"></motion.div>
       <motion.div
         className="planets"

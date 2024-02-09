@@ -100,15 +100,17 @@
     flex: 3;
     display: flex;
     flex-wrap: wrap;
-    // max-width: 1366px;
+    justify-content: center;
     align-items: center;
     margin: auto;
     gap: 12px;
     padding: "2rem";
 
     @include mobile {
-      flex-direction: column;
+      // flex-direction: column;
       width: 100%;
+      gap: 2rem;
+      overflow-y: scroll;
     }
 
     .box {

@@ -54,7 +54,7 @@ const Hero = () => {
         </div>
         
         <motion.h1 variants={textVariants}>
-          Talloires Network Leaders<br/> Conference (TNLC2024)
+          Talloires Network Leaders<br/> Conference (TNLC 2024)
           </motion.h1>
           <motion.h2 variants={textVariants}>3-5 December 2024</motion.h2>
           <motion.h3 variants={textVariants}>Organised by</motion.h3>
