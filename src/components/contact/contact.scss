@@ -15,6 +15,22 @@
     width: 100%;
     padding: 10px;
     flex-direction: column;
+    gap: 20px;
+  }
+
+  #contactContainer{ 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: .5px solid black;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 10px;
+      padding: .5rem;
+    }
   }
 
   .textContainer {
@@ -27,12 +43,12 @@
       gap: 20px;
       text-align: center;
       align-items: center;
-      margin-top: 70px;
+      margin-top: 30px;
     }
 
     h1 {
       font-size: 100px;
-      line-height: 88px;
+      // line-height: 88px;
 
       @include mobile {
         font-size: 36px;
@@ -91,3 +107,4 @@
     }
   }
 }
+

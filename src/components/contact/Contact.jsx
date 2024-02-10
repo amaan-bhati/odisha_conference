@@ -74,16 +74,7 @@ const Contact = () => {
       initial="initial"
       whileInView="animate"
     >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "100%",
-          border: ".5px solid black",
-          padding: "1.5rem",
-          flexWrap: "wrap",
-        }}
-      >
+      <div id="contactContainer">
         <motion.div className="textContainer" variants={variants}>
           <motion.h1 variants={variants}>Stay Updated</motion.h1>
           <motion.div className="item" variants={variants}>
